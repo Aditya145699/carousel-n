@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Carousel</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider">
+        <div class="slides" style="--img: url('download.jpg')"></div>
+        <div class="slides" style="--img: url('download1.jpg')"></div>
+        <div class="slides" style="--img: url('download2.jpg')"></div>
+        <div class="slides" style="--img: url('download3.jpg')"></div>
+        <div class="slides" style="--img: url('download4.jpg')"></div>
+        <div class="slides" style="--img: url('download5.jpg')"></div>
+      </div>
+      <div class="buttons">
+        <span class="prev"></span>
+        <span class="next"></span>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let next = document.querySelector(".next");
+        let prev = document.querySelector(".prev");
+        let slider = document.querySelector(".slider");
+
+        next.addEventListener("click", function () {
+          let slides = document.querySelectorAll(".slides");
+          slider.appendChild(slides[0]);
+        });
+
+        prev.addEventListener("click", function () {
+          let slides = document.querySelectorAll(".slides");
+          slider.insertBefore(slides[slides.length - 1], slides[0]);
+        });
+      });
+    </script>
+  </body>
+</html>
