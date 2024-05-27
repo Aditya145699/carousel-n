@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Carousel</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider">
+        <div
+          class="slides"
+          style="
+            --img: url('https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811204/nalanda%20image/n91bp8fm0usrqc08ztd7.jpg');
+          "></div>
+
+        <div
+          class="slides"
+          style="
+            --img: url('https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811258/nalanda%20image/jp4gmnawrcdm8ycnjwdd.jpg');
+          "></div>
+        <div
+          class="slides"
+          style="
+            --img: url('https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811241/nalanda%20image/vopfzi6qjuwqkvjpgyjz.jpg');
+          "></div>
+        <div
+          class="slides"
+          style="
+            --img: url('https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811238/nalanda%20image/u0bj448bqzjn6bjc6d1c.jpg');
+          "></div>
+        <div
+          class="slides"
+          style="
+            --img: url('https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811233/nalanda%20image/tsjq6kcnlj53ltgwsyqh.jpg');
+          "></div>
+        <div
+          class="slides"
+          style="
+            --img: url(' https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811225/nalanda%20image/b5lwdtlo7uhf6xor7jcc.jpg');
+          "></div>
+
+        <div
+          class="slides"
+          style="
+            --img: url('https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811222/nalanda%20image/c33f8ib9vuvpifu14feo.jpg');
+          "></div>
+        <div
+          class="slides"
+          style="
+            --img: url('https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811204/nalanda%20image/n91bp8fm0usrqc08ztd7.jpg');
+          "></div>
+
+        <div
+          class="slides"
+          style="
+            --img: url('https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811201/nalanda%20image/ptnxpupprk2yavry3nih.jpg');
+          "></div>
+        <div
+          class="slides"
+          style="
+            --img: url('https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811200/nalanda%20image/kjqrvxdjzcyuxklhjjoc.jpg');
+          "></div>
+      </div>
+      <div class="buttons">
+        <span class="prev"></span>
+        <span class="next"></span>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let next = document.querySelector(".next");
+        let prev = document.querySelector(".prev");
+        let slider = document.querySelector(".slider");
+
+        next.addEventListener("click", function () {
+          let slides = document.querySelectorAll(".slides");
+          slider.appendChild(slides[0]);
+        });
+
+        prev.addEventListener("click", function () {
+          let slides = document.querySelectorAll(".slides");
+          slider.insertBefore(slides[slides.length - 1], slides[0]);
+        });
+      });
+    </script>
+  </body>
+</html>
